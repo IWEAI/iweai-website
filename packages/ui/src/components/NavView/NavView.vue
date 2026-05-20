@@ -41,21 +41,9 @@ const menuList = computed(() => {
   )
 
   if (siteConfig.pastIweai.length > 0) {
-    items.push({
-      title: 'PAST IWEAI',
-      path: '/past',
-      children: [
-        ...siteConfig.pastIweai.map((p) => ({
-          title: String(p.year),
-          path: `/past/${p.year}`,
-          link: p.url,
-        })),
-        { title: String(siteConfig.year), path: '/past' },
-      ],
-    })
-  } else {
     items.push({ title: 'PAST IWEAI', path: '/past' })
   }
+  items.push({ title: 'PHOTO GALLERY', path: '/gallery' })
 
   items.push({
     title: siteConfig.pricaiLabel,

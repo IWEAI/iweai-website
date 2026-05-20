@@ -59,6 +59,11 @@ export function createYearRouter(base: string) {
         name: 'past',
         component: () => import('../views/PastView/index.vue'),
       },
+      {
+        path: '/gallery',
+        name: 'gallery',
+        component: () => import('../views/GalleryView/index.vue'),
+      },
     ],
   })
 }
