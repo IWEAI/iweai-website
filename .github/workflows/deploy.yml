@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         # ← ADD a new year here when you add apps/YEAR/
-        year: [2024, 2025]
+        year: [2024, 2025, 2026]
 
     steps:
       - uses: actions/checkout@v4

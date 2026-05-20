@@ -6,8 +6,9 @@
     "apps/*"
   ],
   "scripts": {
-    "build:all": "npm run build --workspace=apps/2024 && npm run build --workspace=apps/2025",
+    "build:all": "npm run build --workspace=apps/2024 && npm run build --workspace=apps/2025 && npm run build --workspace=apps/2026",
     "dev:2024": "npm run dev --workspace=apps/2024",
-    "dev:2025": "npm run dev --workspace=apps/2025"
+    "dev:2025": "npm run dev --workspace=apps/2025",
+    "dev:2026": "npm run dev --workspace=apps/2026"
   }
 }
