@@ -1,0 +1,1 @@
+import{T as e}from"./TBDCard-CDYy4S85.js";import{t as a,p as t,r as o,W as n,_ as s}from"./index-OA4f6dBJ.js";import"./el-card-CmjloxAb.js";const _={class:"container animate__animated animate__fadeIn",id:"keynotes"},c=a({__name:"index",setup(r){return(i,m)=>(n(),t("div",_,[o(e,{class:"common"})]))}}),l=s(c,[["__scopeId","data-v-b7a02154"]]);export{l as default};
