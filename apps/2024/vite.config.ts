@@ -11,7 +11,7 @@ export default defineConfig({
     AutoImport({ resolvers: [ElementPlusResolver()] }),
     Components({ resolvers: [ElementPlusResolver()] }),
   ],
-  base: '/2024/',
+  base: '/iweai-website/2024/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

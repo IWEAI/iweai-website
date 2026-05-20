@@ -12,7 +12,7 @@ export default defineConfig({
     Components({ resolvers: [ElementPlusResolver()] }),
   ],
   // ← CHANGE: replace 2026 with the actual year
-  base: '/2026/',
+  base: '/iweai-website/2026/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

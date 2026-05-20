@@ -61,13 +61,10 @@ jobs:
           done
           ls -R deploy/
 
-      - name: Deploy to iweai.github.io
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          # PAT with repo scope — stored as secret DEPLOY_TOKEN in this repo
-          personal_token: ${{ secrets.DEPLOY_TOKEN }}
-          external_repository: IWEAI/iweai.github.io
-          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./deploy
-          # Keep files from other deployments not included in this build
+          publish_branch: gh-pages
           keep_files: true

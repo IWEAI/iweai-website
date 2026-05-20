@@ -7,5 +7,5 @@ import { createYearRouter } from '@iweai/ui'
 
 const app = createApp(App)
 app.use(createPinia())
-app.use(createYearRouter('/2024/'))
+app.use(createYearRouter('/iweai-website/2024/'))
 app.mount('#app')
