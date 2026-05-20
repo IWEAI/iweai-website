@@ -57,8 +57,8 @@ export const siteConfig: SiteConfig = {
   // Add an entry for each previous year. These appear as external links.
   // Do NOT include the current year — it always shows as internal link.
   pastIweai: [
-    { year: 2024, url: 'https://iweai.github.io/2024/' },
-    { year: 2025, url: 'https://iweai.github.io/2025/' },
+    { year: 2024, url: 'https://iweai.github.io/iweai-website/2024/' },
+    { year: 2025, url: 'https://iweai.github.io/iweai-website/2025/' },
     // { year: 2026, url: 'https://iweai.github.io/2026/' },  // ← Add when archiving
   ],
 

@@ -20,7 +20,7 @@ export const siteConfig: SiteConfig = {
   showKeynotes: false,
   showProgram: false,
   pastIweai: [
-    { year: 2024, url: 'https://iweai.github.io/2024/' },
+    { year: 2024, url: 'https://iweai.github.io/iweai-website/2024/' },
   ],
   carouselImageFiles: ['bg.jpg', 'bg2.jpeg', 'bg3.jpg'],
   supportingOrgs: [
