@@ -1,0 +1,71 @@
+name: Build & Deploy All Years
+
+on:
+  push:
+    branches: ["main"]
+  # Allow manual trigger from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # ← ADD a new year here when you add apps/YEAR/
+        year: [2024, 2025]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20.x"
+          cache: "npm"
+
+      - name: Install all workspace dependencies
+        run: npm ci
+
+      - name: Build IWEAI ${{ matrix.year }}
+        run: npm run build --workspace=apps/${{ matrix.year }}
+
+      - name: Upload build artifact for ${{ matrix.year }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-${{ matrix.year }}
+          path: apps/${{ matrix.year }}/dist/
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download all build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: combined-dist/
+
+      # Flatten: combined-dist/dist-2024/ → deploy/2024/
+      #          combined-dist/dist-2025/ → deploy/2025/
+      - name: Assemble deployment directory
+        run: |
+          mkdir -p deploy
+          for artifact_dir in combined-dist/dist-*/; do
+            year=$(basename "$artifact_dir" | sed 's/dist-//')
+            echo "Placing year $year → deploy/$year/"
+            mv "$artifact_dir" "deploy/$year"
+          done
+          ls -R deploy/
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./deploy
+          publish_branch: gh-pages
+          # Keep files from previous deployments that aren't in this build
+          keep_files: true

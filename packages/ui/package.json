@@ -1,0 +1,16 @@
+{
+  "name": "@iweai/ui",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./src/style.css": "./src/style.css"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.2",
+    "pinia": "^2.1.7",
+    "element-plus": "^2.7.2",
+    "animate.css": "^4.1.1"
+  }
+}

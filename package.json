@@ -1,0 +1,13 @@
+{
+  "name": "iweai-website",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build:all": "npm run build --workspace=apps/2024 && npm run build --workspace=apps/2025",
+    "dev:2024": "npm run dev --workspace=apps/2024",
+    "dev:2025": "npm run dev --workspace=apps/2025"
+  }
+}

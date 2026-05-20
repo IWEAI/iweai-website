@@ -1,0 +1,34 @@
+# Original year repos (kept locally for reference, not part of monorepo)
+2024/
+2025/
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+apps/*/dist/
+
+# Auto-generated type files (recreated at build time)
+auto-imports.d.ts
+components.d.ts
+apps/*/auto-imports.d.ts
+apps/*/components.d.ts
+template/auto-imports.d.ts
+template/components.d.ts
+
+# Editor
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
