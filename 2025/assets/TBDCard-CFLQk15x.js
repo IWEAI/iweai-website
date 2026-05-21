@@ -1,0 +1,1 @@
+import{E as t}from"./el-card-BofRKSmC.js";import{_ as o,x as r,z as s,aG as c,u as n,ai as _}from"./index-CUxmu-4v.js";const d={};function l(i,e){const a=t;return _(),r("div",null,[s(a,null,{default:c(()=>[...e[0]||(e[0]=[n("h2",{class:"title"},"To Be Determined",-1)])]),_:1})])}const p=o(d,[["render",l],["__scopeId","data-v-73a5c213"]]);export{p as T};
