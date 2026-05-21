@@ -18,7 +18,7 @@ export const siteConfig: SiteConfig = {
     workshop: 'November 17-18th, 2025',
   },
   showKeynotes: false,
-  showProgram: false,
+  showProgram: true,
   pastIweai: [
     { year: 2024, url: 'https://iweai.github.io/iweai-website/2024/' },
   ],
