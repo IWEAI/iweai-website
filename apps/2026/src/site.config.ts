@@ -25,7 +25,7 @@ export const siteConfig: SiteConfig = {
     city: 'Guangzhou',                 // ← CHANGE: Host city
     country: 'China',           // ← CHANGE: Host country
   },
-  dates: 'DD-DD Month YYYY',           // ← CHANGE: e.g. "17-18 November 2026"
+  dates: '17-18 November 2026',
 
   // ── Contact & partner links ──────────────────────────────────────
   email: 'iweai@outlook.com',      // ← CHANGE: Year-specific contact email
@@ -43,7 +43,7 @@ export const siteConfig: SiteConfig = {
     abstractDeadline: 'August 29, 2026',  // ← CHANGE
     acceptance: 'September 10, 2026',        // ← CHANGE
     cameraReady: 'September 20, 2026',       // ← CHANGE
-    workshop: 'November 17, 2026',       // ← CHANGE
+    workshop: 'November 17-18, 2026',       // ← CHANGE
     // note: 'Custom deadline note',     // ← OPTIONAL: Override the default "anywhere on earth" note
   },
 
