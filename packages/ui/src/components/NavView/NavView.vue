@@ -13,15 +13,28 @@ const activeIndex = ref('/home')
 const ellipsis = ref(false)
 
 const menuList = computed(() => {
-  const items: any[] = [
-    { title: 'HOME', path: '/home' },
-  ]
+  const moreChildren: any[] = []
 
   if (siteConfig.showKeynotes) {
-    items.push({ title: 'KEYNOTES', path: '/keynotes' })
+    moreChildren.push({ title: 'KEYNOTES', path: '/keynotes' })
   }
 
-  items.push(
+  moreChildren.push(
+    { title: 'ATTENDING', path: '/attending', link: siteConfig.attendingUrl },
+    { title: 'LOCAL ATTRACTIONS', path: '/local' },
+  )
+
+  if (siteConfig.pastIweai.length > 0) {
+    moreChildren.push({ title: 'PAST IWEAI', path: '/past' })
+  }
+
+  moreChildren.push(
+    { title: 'PHOTO GALLERY', path: '/gallery' },
+    { title: siteConfig.pricaiLabel, path: '/pricai', link: siteConfig.pricaiUrl },
+  )
+
+  return [
+    { title: 'HOME', path: '/home' },
     { title: 'PROGRAM', path: '/program' },
     {
       title: 'ORGANIZATION',
@@ -32,26 +45,8 @@ const menuList = computed(() => {
       ],
     },
     { title: 'CALL FOR ABSTRACTS', path: '/abstracts' },
-    {
-      title: 'ATTENDING',
-      path: '/attending',
-      link: siteConfig.attendingUrl,
-    },
-    { title: 'LOCAL ATTRACTIONS', path: '/local' },
-  )
-
-  if (siteConfig.pastIweai.length > 0) {
-    items.push({ title: 'PAST IWEAI', path: '/past' })
-  }
-  items.push({ title: 'PHOTO GALLERY', path: '/gallery' })
-
-  items.push({
-    title: siteConfig.pricaiLabel,
-    path: '/pricai',
-    link: siteConfig.pricaiUrl,
-  })
-
-  return items
+    { title: 'MORE', path: '/more', children: moreChildren },
+  ]
 })
 
 const changeMenuItem = (item: any) => {
