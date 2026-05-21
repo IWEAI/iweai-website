@@ -9,7 +9,7 @@ import type { NewsItem } from '@iweai/ui'
 
 const news: NewsItem[] = [
   // ← ADD news items here
-  { date: 'Month DD, YYYY', text: 'The website is open!' },
+  { date: 'May 20, 2026', text: 'The website is open!' },
 ]
 
 export default news
