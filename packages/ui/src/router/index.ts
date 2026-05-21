@@ -37,11 +37,6 @@ export function createYearRouter(base: string) {
             name: 'committee',
             component: () => import('../views/OrgView/Committee.vue'),
           },
-          {
-            path: '/organization/pcmembers',
-            name: 'pcmembers',
-            component: () => import('../views/OrgView/PCMembers.vue'),
-          },
         ],
       },
       {

@@ -41,7 +41,6 @@ const menuList = computed(() => {
       path: '/organization',
       children: [
         { title: 'ORGANIZING COMMITTEE', path: '/organization/committee' },
-        { title: 'PC MEMBERS', path: '/organization/pcmembers' },
       ],
     },
     { title: 'CALL FOR ABSTRACTS', path: '/abstracts' },
