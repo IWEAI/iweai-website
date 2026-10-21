@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>IWEAI</title>
+  <script>
+    // GitHub Pages only uses a 404.html at the site root. A direct visit to
+    // /iweai-website/2026/local never reaches the Vue app, so remember the
+    // path and load that year's index. The router restores the URL on startup.
+    (function () {
+      var match = window.location.pathname.match(/^\/iweai-website\/(20\d{2})(\/.*)?$/);
+      if (!match) return;
+      var year = match[1];
+      var rest = match[2] || "/";
+      if (rest.length > 1 && rest.charAt(rest.length - 1) === "/") rest = rest.slice(0, -1);
+      if (rest === "/" || rest === "/index.html") return;
+      try {
+        sessionStorage.setItem(
+          "iweai-spa-path",
+          JSON.stringify({
+            year: year,
+            path: rest + window.location.search + window.location.hash
+          })
+        );
+      } catch (e) {}
+      window.location.replace("/iweai-website/" + year + "/");
+    })();
+  </script>
+</head>
+<body>
+  <p>Page not found. <a href="/iweai-website/2026/">IWEAI 2026</a></p>
+</body>
+</html>

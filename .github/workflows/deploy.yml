@@ -59,6 +59,8 @@ jobs:
             echo "Placing year $year → deploy/$year/"
             mv "$artifact_dir" "deploy/$year"
           done
+          # GitHub Pages serves only this root file for unknown paths such as /2026/local.
+          cp pages/404.html deploy/404.html
           ls -R deploy/
 
       - name: Deploy to GitHub Pages
