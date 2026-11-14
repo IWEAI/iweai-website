@@ -72,7 +72,5 @@ export const siteConfig: SiteConfig = {
   // Place logo files in src/assets/imgs/ and reference them here.
   supportingOrgs: [
     { name: 'SCNU', logoFile: 'btm-img1.png' },
-    { name: 'Deakin', logoFile: 'btm-img2.png' },
-    // Add or remove organisations as needed
   ],
 }
