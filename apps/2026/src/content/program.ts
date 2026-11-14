@@ -37,7 +37,13 @@ const program: ProgramData = {
       presenter: 'Gen Li (Chubu University)',
     },
     {
-      time: '11:10 – 11:55',
+      time: '11:10 – 11:25',
+      title: 'Break and Panel Setup',
+      presenter: '',
+      isHighlighted: true,
+    },
+    {
+      time: '11:25 – 12:10',
       title: 'Panel Discussion: Are we building AI that makes students better, or just makes their work look better?',
       presenter: 'Sankalp Khanna (CSIRO, moderator), Abdul Sattar (Griffith University), Patricia Anthony (Lincoln University), Gen Li (Chubu University), Li Chen (Nagoya University)',
     },
