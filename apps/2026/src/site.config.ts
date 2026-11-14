@@ -51,7 +51,7 @@ export const siteConfig: SiteConfig = {
   // Set showKeynotes: true once keynote speakers are confirmed
   showKeynotes: false,
   // Set showProgram: true once the program schedule is ready; until then shows "To Be Determined"
-  showProgram: false,
+  showProgram: true,
 
   // ── Past IWEAI editions (shown in navigation submenu) ───────────
   // Add an entry for each previous year. These appear as external links.

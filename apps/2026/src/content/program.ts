@@ -1,39 +1,46 @@
-/**
- * Workshop program schedule.
- *
- * Leave sessions as an empty array until the schedule is finalized.
- * Set siteConfig.showProgram = true in site.config.ts to show this table;
- * while false, the Program page displays "To Be Determined" instead.
- *
- * isHighlighted: true  → renders the row with a light-gray background
- */
 import type { ProgramData } from '@iweai/ui'
 
 const program: ProgramData = {
   workshopLabel: 'The 3rd International Workshop on Educational Artificial Intelligence (IWEAI 2026)',
-  // ← CHANGE: actual date once confirmed
-  date: 'DD Month YYYY',
-  // ← CHANGE: local timezone abbreviation, e.g. "UTC+9", "NZDT", "AEDT"
-  timezone: 'UTC+0',
+  date: '17 November 2026',
+  timezone: 'UTC+8',
   sessions: [
-    // ── Example session format ────────────────────────────────────
-    // {
-    //   time: '9:00–9:30',
-    //   title: 'Opening Remarks',
-    //   presenter: 'Workshop Chairs',
-    // },
-    // {
-    //   time: '9:30–10:00',
-    //   title: 'Keynote Talk Title',
-    //   presenter: 'Speaker Name',
-    //   isHighlighted: true,
-    // },
-    // {
-    //   time: '10:00–10:15',
-    //   title: 'Break',
-    //   presenter: '',
-    // },
-    // ← ADD sessions here
+    {
+      time: '8:30 – 9:00',
+      title: 'Rethinking Assessment in Computer Science in the Era of GenAI: The Lincoln University Experience',
+      presenter: 'Patricia Anthony (Lincoln University)',
+    },
+    {
+      time: '9:00 – 9:30',
+      title: 'Personalized Knowledge Recommendation: From Exercise Recommendation and Learning Path Planning to Unified Evaluation',
+      presenter: 'Quanlong Guan (Jinan University)',
+    },
+    {
+      time: '9:30 – 10:00',
+      title: 'Federated Graph Learning for AI in Education',
+      presenter: 'Di Wu (Sun Yat-sen University)',
+    },
+    {
+      time: '10:00 – 10:10',
+      title: 'Break',
+      presenter: '',
+      isHighlighted: true,
+    },
+    {
+      time: '10:10 – 10:40',
+      title: 'From Knowledge Tracing to Exercise Recommendation: Towards Personalized Learning',
+      presenter: 'Yubing Li (South China Normal University)',
+    },
+    {
+      time: '10:40 – 11:10',
+      title: 'Bridging Knowledge and Self-Awareness: Tracing What Students Know and What They Think They Know',
+      presenter: 'Gen Li (Chubu University)',
+    },
+    {
+      time: '11:10 – 11:55',
+      title: 'Panel Discussion: Are we building AI that makes students better, or just makes their work look better?',
+      presenter: 'Sankalp Khanna (CSIRO, moderator), Abdul Sattar (Griffith University), Patricia Anthony (Lincoln University), Gen Li (Chubu University), Li Chen (Nagoya University)',
+    },
   ],
 }
 
